@@ -1,0 +1,13 @@
+.portfolio-filter {
+    button {
+        &.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+    }
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 180px;
+}

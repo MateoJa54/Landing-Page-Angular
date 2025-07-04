@@ -1,0 +1,13 @@
+.contact-form {
+    max-width: 600px;
+    .form-control {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #007bff;
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}
