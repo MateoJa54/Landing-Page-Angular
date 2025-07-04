@@ -1,13 +1,71 @@
+.lead {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--gunmetal-gray);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+:host {
+    display: block;
+    background-color: var(--white);
+}
+
+
+/* 2) estilos internos (los que ya tenías) */
+
+.section {
+    padding: 80px 0;
+}
+
 .contact-form {
     max-width: 600px;
-    .form-control {
-        border: 1px solid #ddd;
-        border-radius: 5px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .form-group {
+        margin-bottom: 20px;
+        label {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--dark-charcoal);
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--light-beige);
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
     }
-    button {
-        background-color: #007bff;
+    .button {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        background-color: var(--warm-gray);
+        color: var(--white);
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .3s ease;
         &:hover {
-            background-color: #0056b3;
+            background-color: var(--dark-charcoal);
+        }
+        &:disabled {
+            opacity: .6;
+            cursor: not-allowed;
         }
     }
 }

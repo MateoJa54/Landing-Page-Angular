@@ -1,8 +1,6 @@
-/* header.scss */
-
 .hero {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--dark-charcoal);
+    color: var(--white);
     padding: 70px 0;
     text-align: center;
     position: relative;
@@ -16,12 +14,13 @@
     }
     .hero-content {
         position: relative;
+        z-index: 1;
     }
     .profile-image {
         width: 210px;
         height: 210px;
         margin: 0 auto 20px;
-        border: 5px solid #fff;
+        border: 5px solid var(--white);
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -32,24 +31,31 @@
         }
     }
     h1 {
-        font-size: 3em;
+        font-family: var(--font-heading);
+        font-size: 40px;
         margin-bottom: 10px;
+        font-weight: 700;
     }
     .hero-subtitle {
-        font-size: 1.5em;
-        color: #ddd;
+        font-family: var(--font-heading);
+        font-size: 20px;
+        color: var(--light-beige);
         margin-bottom: 20px;
+        font-weight: 500;
     }
     .social-links {
+        list-style: none;
         display: flex;
         justify-content: center;
         gap: 20px;
+        padding: 0;
+        margin: 0;
         a {
-            color: #fff;
+            color: var(--white);
             font-size: 2rem;
-            transition: color .3s;
+            transition: color 0.3s ease;
             &:hover {
-                color: #ccc;
+                color: var(--warm-gray);
             }
         }
     }

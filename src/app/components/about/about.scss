@@ -1,4 +1,10 @@
-/* about.scss */
+:host {
+    display: block;
+    background-color: var(--white);
+}
+
+
+/* 2) estilos internos (los que ya tenías) */
 
 .section {
     padding: 80px 0;
@@ -8,28 +14,73 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    @media(max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
         grid-template-columns: 1fr;
     }
 }
 
-.lead {
-    text-align: center;
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 25px;
+.profile-info {
+    h2 {
+        font-family: var(--font-heading);
+        font-size: 32px;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--warm-gray);
+        }
+    }
+    .lead {
+        font-family: var(--font-body);
+        font-size: 18px;
+        color: var(--gunmetal-gray);
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    p {
+        font-family: var(--font-body);
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
 }
 
-.personal-details ul {
-    list-style: none;
-    padding: 0;
-    li {
-        margin-bottom: 10px;
-        a {
-            color: #007bff;
-            transition: color .3s;
-            &:hover {
-                color: #0056b3;
+.personal-details {
+    padding-top: 110px;
+    padding-left: 30px;
+    @media (max-width: 768px) {
+        padding: 30px 0 0;
+        text-align: center;
+    }
+    h3 {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            font-family: var(--font-body);
+            font-size: 16px;
+            margin-bottom: 10px;
+            a {
+                color: var(--warm-gray);
+                transition: color .3s;
+            }
+            a:hover {
+                color: var(--dark-charcoal);
             }
         }
     }

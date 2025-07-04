@@ -1,38 +1,27 @@
-<section class="section bg-light">
+<!-- src/app/components/portfolio/portfolio.html -->
+<section id="portfolio" class="section bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Mi Portafolio</h2>
+        <h2>Mi Portafolio</h2>
 
         <!-- Filtros -->
-        <div class="portfolio-filter text-center mb-4">
-            <button class="btn btn-outline-primary me-2" [class.active]="filter() === 'all'" (click)="setFilter('all')">
-        Todos
-      </button>
-            <button class="btn btn-outline-primary me-2" [class.active]="filter() === 'web'" (click)="setFilter('web')">
-        Web
-      </button>
-            <button class="btn btn-outline-primary me-2" [class.active]="filter() === 'ecom'" (click)="setFilter('ecom')">
-        E-com
-      </button>
-            <button class="btn btn-outline-primary" [class.active]="filter() === 'desktop'" (click)="setFilter('desktop')">
-        Desktop
-      </button>
-            <button class="btn btn-outline-primary ms-2" [class.active]="filter() === 'iot'" (click)="setFilter('iot')">
-        IoT
-      </button>
+        <div class="portfolio-filter mb-4 text-center">
+            <button (click)="filter.set('all')" [class.active]="filter() === 'all'">Todas</button>
+            <button (click)="filter.set('web')" [class.active]="filter() === 'web'">Web</button>
+            <button (click)="filter.set('oop')" [class.active]="filter() === 'oop'">OOP</button>
         </div>
 
-        <!-- Grid de proyectos -->
-        <div class="row g-4">
-            <div class="col-12 col-sm-6 col-lg-3" *ngFor="let p of filtered()">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Itera sobre el valor computed() -->
+            <div class="col" *ngFor="let p of filtered()">
                 <div class="card h-100 shadow-sm">
-                    <img [src]="p.img" [alt]="p.title" class="card-img-top">
+                    <img [src]="p.img" class="card-img-top" [alt]="p.title">
                     <div class="card-body">
                         <h5 class="card-title">{{ p.title }}</h5>
                         <p class="card-text">{{ p.desc }}</p>
                     </div>
                     <div class="card-footer bg-transparent border-0">
-                        <a [href]="p.repo" target="_blank" class="btn btn-primary w-100">
-              Ver en GitHub <i class="bi bi-github ms-1"></i>
+                        <a [href]="p.repo" class="btn btn-primary" target="_blank">
+              Ver en GitHub <i class="bi bi-github"></i>
             </a>
                     </div>
                 </div>

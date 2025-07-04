@@ -1,11 +1,33 @@
-/* src/app/components/skills/skills.scss */
-
 .bg-dark {
-    background-color: #333 !important;
+    background-color: var(--gunmetal-gray);
+    h2 {
+        color: var(--white) !important;
+    }
 }
 
 .skill-card {
+    background-color: var(--white) !important;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform .3s ease;
+    &:hover {
+        transform: translateY(-5px);
+    }
     i {
-        font-size: 2em;
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    h4 {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        color: var(--dark-charcoal);
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    p.text-secondary {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--gunmetal-gray) !important;
+        line-height: 1.4;
     }
 }

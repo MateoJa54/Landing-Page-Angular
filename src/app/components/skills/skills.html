@@ -1,14 +1,12 @@
-<!-- src/app/components/skills/skills.html -->
 <section id="skills" class="section bg-dark">
     <div class="container">
-        <h2 class="text-center text-white mb-4">Mis Habilidades</h2>
+        <h2 class="text-white mb-4">Mis Habilidades</h2>
         <div class="row text-center gy-4">
-            <div class="col-6 col-md-4" *ngFor="let skill of skills">
+            <div class="col-6 col-md-4" *ngFor="let s of skills">
                 <div class="skill-card p-4 bg-white rounded shadow-sm">
-                    <!-- Aplica ambas clases: bi bi-ICON y COLOR -->
-                    <i [class]="'bi bi-' + skill.icon + ' display-4 mb-2 ' + skill.color"></i>
-                    <h4 class="text-dark mb-0">{{ skill.name }}</h4>
-                    <p class="text-secondary small">{{ skill.desc }}</p>
+                    <i class="bi bi-{{s.icon}} display-4 mb-2 {{s.color}}"></i>
+                    <h4 class="text-dark mb-0">{{s.name}}</h4>
+                    <p class="text-secondary small">{{s.desc}}</p>
                 </div>
             </div>
         </div>

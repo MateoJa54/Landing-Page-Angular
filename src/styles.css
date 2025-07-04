@@ -1,3 +1,27 @@
+/* src/styles.css */
+
+
+/* 1) Imports de fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+/* 2) Variables y reset ligero */
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-charcoal: #222831;
+    --gunmetal-gray: #393E46;
+    --warm-gray: #948979;
+    --light-beige: #DFD0B8;
+    --white: #FFFFFF;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +29,12 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    font-family: var(--font-body);
+    background-color: var(--light-beige);
+    color: var(--dark-charcoal);
     line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: grayscale;
 }
 
 .container {
@@ -23,4 +45,24 @@ a {
 
 .section {
     padding: 80px 0;
+}
+
+.section h2 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--warm-gray);
+    }
 }

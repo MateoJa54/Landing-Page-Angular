@@ -1,13 +1,56 @@
-.portfolio-filter {
-    button {
-        &.active {
-            background-color: #007bff;
-            color: #fff;
+/* src/app/components/portfolio/portfolio.scss */
+
+.bg-light {
+    background-color: var(--light-beige) !important;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--light-beige);
+    .card-title {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--dark-charcoal);
+    }
+    .card-text {
+        font-family: var(--font-body);
+        font-size: 16px;
+        color: var(--gunmetal-gray);
+    }
+    .btn-primary {
+        font-family: var(--font-heading);
+        font-size: 16px;
+        background-color: var(--warm-gray) !important;
+        border-color: var(--warm-gray) !important;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        &:hover {
+            background-color: var(--dark-charcoal) !important;
+            border-color: var(--dark-charcoal) !important;
         }
     }
 }
 
-.card-img-top {
-    object-fit: cover;
-    height: 180px;
+.portfolio-filter {
+    button {
+        background: none;
+        border: 1px solid var(--warm-gray);
+        color: var(--warm-gray);
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        font-family: var(--font-heading);
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        &.active,
+        &:hover {
+            background-color: var(--warm-gray);
+            color: var(--white);
+        }
+    }
 }
